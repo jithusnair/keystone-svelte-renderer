@@ -1,7 +1,5 @@
 import DefaultElement from './DefaultElement.svelte';
-import type { Component } from 'svelte';
-
-export type Renderers = { [key: string]: Component | null };
+import type { Renderers } from './types.js';
 
 export const defaultRenderers: Renderers = {
 	bold: DefaultElement,
