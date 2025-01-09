@@ -1,17 +1,8 @@
 <script lang="ts">
 	import DocumentNode from './DocumentNode.svelte';
-	import { defaultRenderers, type Renderers } from './default-renderers.js';
+	import { defaultRenderers } from './default-renderers.js';
+	import type { Renderers, Element } from './types.js';
 
-	type Element = {
-		children: Node[];
-		[key: string]: unknown;
-	};
-	type Text = {
-		text: string;
-		[key: string]: unknown;
-	};
-
-	type Node = Element | Text;
 	interface Props {
 		document: Element[];
 		renderers?: Renderers;
